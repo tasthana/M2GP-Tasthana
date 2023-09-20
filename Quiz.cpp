@@ -4,7 +4,7 @@ using namespace std;
 
 void Quiz::readQuizFromFile(string filename) {
     // TODO: Reset/clear the vector of Questions
-
+    Question().clearAnswers();
 
     // Open the file
     ifstream inFile("../" + filename);
@@ -52,8 +52,7 @@ void Quiz::readQuizFromFile(string filename) {
         }
 
         // TODO: Add the Question to vector field
-
-
+        getQuestion(question)
         // Increment question number
         ++currQuestion;
     }
@@ -78,7 +77,7 @@ void Quiz::takeQuiz(string filename, ostream& outs, istream& ins) {
     int index;
     // Print each question and get answer from user
     // TODO: the next line should loop through the vector field
-    for (Question& q : /* put your component field here */) {
+    for (Quest  :  /* put your component field here */) {
         totalPointsPossible += q.getPoints();
 
         // Print the question
@@ -90,7 +89,7 @@ void Quiz::takeQuiz(string filename, ostream& outs, istream& ins) {
         while (input.size() != 1 || tolower(input[0]) < 'a' || tolower(input[0]) >= ('a' + q.getNumAnswers())) {
             // TODO: There is invalid input.
             // Print "Invalid input. Try again: " to outs
-            // Use getline to read from ins into input
+            // Use get line to read from ins into input
             // Note that with string/character invalid input, the stream stays in a good state so you do not need to clear the stream or get rid of the junk input like you do with int/float type validation.
 
         }
