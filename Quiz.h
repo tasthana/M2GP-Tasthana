@@ -10,7 +10,8 @@ private:
     int totalPointsCorrect;
     int totalPointsPossible;
     // TODO: Add component field to store the Question objects
-    string question;
+    int numberOfQuestions;
+    vector<Question> quizQuestions;
 
     /* Helper function to read Quiz data from a file */
     void readQuizFromFile(string filename);
@@ -23,9 +24,10 @@ public:
     int getTotalPointsCorrect() const;
     int getTotalPointsPossible() const;
     int getNumberOfQuestions() const;
+
     // Note: You may want to change the return type of the following two methods to optional<Question>
-    Question getQuestion(int index) const;
-    Question getQuestion(string prompt) const;
+    std::optional<Question> getQuestion(int index) const;
+    std::optional<Question> getQuestion(string prompt) const;
 
     /* Setter */
     void setTitle(string title);
@@ -37,6 +39,7 @@ public:
 
     /* Interactive method to have the user take the Quiz */
     void takeQuiz(string filename, ostream& outs, istream& ins);
+
 };
 
 

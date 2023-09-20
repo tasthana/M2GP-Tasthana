@@ -52,7 +52,7 @@ void Quiz::readQuizFromFile(string filename) {
         }
 
         // TODO: Add the Question to vector field
-        getQuestion(question)
+        getQuestion(numberOfQuestions);
         // Increment question number
         ++currQuestion;
     }
@@ -60,6 +60,49 @@ void Quiz::readQuizFromFile(string filename) {
 }
 
 // TODO: Implement the other methods of the Quiz class here
+
+// getters
+string Quiz::getTitle() const{
+    return title;
+}
+
+int Quiz::getTotalPointsCorrect() const{
+    return totalPointsCorrect;
+}
+
+int Quiz::getTotalPointsPossible() const {
+    return totalPointsPossible;
+}
+
+int Quiz::getNumberOfQuestions() const{
+    return numberOfQuestions;
+}
+
+// setters
+void Quiz::setTitle(string title){
+    this -> title = title;
+}
+
+void Quiz::addQuestion(Question newQuestion){
+    quizQuestions.push_back(newQuestion);
+}
+
+std::optional<Question> Quiz::getQuestion(int index) const{
+    if (index >= quizQuestions.size() || index < 0 ){
+        return nullopt;
+    }
+    return quizQuestions.at(index);
+}
+
+std::optional<Question> Quiz::getQuestion(string prompt) const{
+    for (Question q : quizQuestions)
+    {
+        if (q.getPrompt() == prompt)
+            return q;
+    }
+    return nullopt;
+}
+
 
 
 void Quiz::takeQuiz(string filename, ostream& outs, istream& ins) {
@@ -77,7 +120,8 @@ void Quiz::takeQuiz(string filename, ostream& outs, istream& ins) {
     int index;
     // Print each question and get answer from user
     // TODO: the next line should loop through the vector field
-    for (Quest  :  /* put your component field here */) {
+    /* put your component field here */
+    for (Question q : quizQuestions ) {
         totalPointsPossible += q.getPoints();
 
         // Print the question
