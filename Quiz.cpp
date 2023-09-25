@@ -61,6 +61,9 @@ void Quiz::readQuizFromFile(string filename) {
 
 // TODO: Implement the other methods of the Quiz class here
 
+Quiz::Quiz() {}
+
+
 // getters
 string Quiz::getTitle() const{
     return title;
@@ -83,7 +86,7 @@ void Quiz::setTitle(string title){
     this -> title = title;
 }
 
-void Quiz::addQuestion(Question newQuestion){
+void Quiz::addQuestion(Question newQuestion) {
     quizQuestions.push_back(newQuestion);
 }
 
@@ -102,8 +105,6 @@ std::optional<Question> Quiz::getQuestion(string prompt) const{
     }
     return nullopt;
 }
-
-
 
 void Quiz::takeQuiz(string filename, ostream& outs, istream& ins) {
     // Read the quiz from the file
@@ -135,7 +136,8 @@ void Quiz::takeQuiz(string filename, ostream& outs, istream& ins) {
             // Print "Invalid input. Try again: " to outs
             // Use get line to read from ins into input
             // Note that with string/character invalid input, the stream stays in a good state so you do not need to clear the stream or get rid of the junk input like you do with int/float type validation.
-
+            outs << "Invalid input. Try again: ";
+            getline(ins, input);
         }
 
         // Get the index of the answer based on the input from the user
@@ -151,3 +153,5 @@ void Quiz::takeQuiz(string filename, ostream& outs, istream& ins) {
     outs << "You scored " << totalPointsCorrect;
     outs << " out of " << totalPointsPossible << endl;
 }
+
+
