@@ -15,6 +15,7 @@ void Quiz::readQuizFromFile(string filename) {
     if (inFile) {
         getline(inFile, title);
         inFile >> numQuestions;
+        numberOfQuestions = numQuestions;
         getline(inFile, newline);
     }
 
@@ -52,7 +53,8 @@ void Quiz::readQuizFromFile(string filename) {
         }
 
         // TODO: Add the Question to vector field
-        getQuestion(numberOfQuestions);
+        quizQuestions.push_back(q);
+//        getQuestion(numberOfQuestions);
         // Increment question number
         ++currQuestion;
     }
@@ -61,7 +63,12 @@ void Quiz::readQuizFromFile(string filename) {
 
 // TODO: Implement the other methods of the Quiz class here
 
-Quiz::Quiz() {}
+Quiz::Quiz() {
+    title = "";
+    totalPointsCorrect = 0;
+    totalPointsPossible = 0;
+    numberOfQuestions = 0;
+}
 
 
 // getters

@@ -46,9 +46,9 @@ Create a `testing.cpp` file and put a `main` function in it that creates `Questi
 ## Questions
 Answer the following prompts here in your `README.md` file:
 * Give three examples of classes that would make sense to implement with the Has-A relationship (e.g. Car has an Engine):
-  1.  
-  2. 
-  3. 
+  1.  Bank has an account.
+  2.  Library has a book.
+  3.  House has a kitchen.
 * Describe in your own words the benefit(s) of the component relationship.
 
 

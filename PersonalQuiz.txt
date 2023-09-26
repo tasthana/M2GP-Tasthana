@@ -1,0 +1,51 @@
+How Well Do You Know Tennis?
+5
+How games are in a set?
+2
+4
+7
+0
+6
+1
+1
+0
+4
+0
+Max amount of sets in a mens match?
+1
+2
+5
+1
+4
+0
+Max amount of sets in a womans match?
+2
+3
+4
+0
+1
+0
+3
+1
+What two of this number indicated the score of deuce?
+1
+4
+15
+0
+30
+0
+40
+1
+10
+0
+How many Grand Slams are there?
+2
+4
+2
+0
+3
+0
+4
+1
+5
+0
