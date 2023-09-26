@@ -50,7 +50,9 @@ Answer the following prompts here in your `README.md` file:
   2.  Library has a book.
   3.  House has a kitchen.
 * Describe in your own words the benefit(s) of the component relationship.
-
+* The benefits of a component relationship are within the name. The relationship takes a part of a large system and breaks it down.
+* Separate component classes allow for better coding structure, and makes it easier to work on a large project. 
+* It is also easier to debug and test the code because the class can be isolated when it is being tested. 
 
 ## Grading
 

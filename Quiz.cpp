@@ -54,7 +54,6 @@ void Quiz::readQuizFromFile(string filename) {
 
         // TODO: Add the Question to vector field
         quizQuestions.push_back(q);
-//        getQuestion(numberOfQuestions);
         // Increment question number
         ++currQuestion;
     }
